@@ -120,15 +120,7 @@ export default function App() {
         directoryUri
       );
 
-      const pdfFiles = files.filter((uri) =>
-        uri.toLowerCase().endsWith(".pdf")
-      );
-
       setPdfFiles(files);
-
-      console.log(
-        `Found ${pdfFiles.length} PDF files in the selected directory`
-      );
     } catch (error) {
       console.error("Error loading PDF files from directory:", error);
       Alert.alert(
